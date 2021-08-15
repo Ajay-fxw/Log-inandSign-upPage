@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Log-in page</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div id="frm">
+<div class="backimg">
+  <form name="f1" action = "authentication.php" onsubmit = "return validation()" method = "POST">  
+    
+  <div class="container text-center card ">
+    <div class="logdiv ">
+     <div class="opacity-3">
+     <div><h1>Log-in</h1></div>
+    </div>
+     
+     <div><input id="user" class="form-control-sm paddi  " placeholder="E-mail or Phone" ></div>
+     <div><input id="pass" class="form-control-sm paddi "  placeholder="Password" ></div>
+     <div><button id="btn" class="form-control-sm padd logbtncolor bg-primary" value="Login">Log-in</button></div>
+     <div>
+      
+        <input type="button" value="Go back!" onclick="history.back()">
+        
+     </div>
+    </div>
+  </div>
+</form>
+</div>
+</div>
+
+<script>  
+  function validation()  
+  {  
+      var id=document.f1.user.value;  
+      var ps=document.f1.pass.value;  
+      if(id.length=="" && ps.length=="") {  
+          alert("User Name and Password fields are empty");  
+          return false;  
+      }  
+      else  
+      {  
+          if(id.length=="") {  
+              alert("User Name is empty");  
+              return false;  
+          }   
+          if (ps.length=="") {  
+          alert("Password field is empty");  
+          return false;  
+          }  
+      }                             
+  }  
+</script>  
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
